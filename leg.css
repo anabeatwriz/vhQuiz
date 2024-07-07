@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+*, :root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+    font-family: 'montserrat', sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+}
+
+  header {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #0C2739;
+    text-align: center;
+    border-radius: 0px 0px 0px 0px;
+    padding-top: 1rem;
+    box-shadow: 0px 4px 3px #99BC29;
+    font-size: 14px;
+  }
+
+  .main{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 2rem 1rem;
+}
+
+  nav a {
+    color: #FFFFFF;
+}
+
+  nav a:hover {
+    color: #99BC29;
+    border-bottom: 1px solid;
+  }
+  
+  #quiz {
+    counter-reset: quiz-item;
+  
+  }
+  
+  .quiz-item {
+    margin-top: 24px;
+    border: 1px solid #0c2739;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .quiz-item h3 {
+    padding: 16px 20px;
+    color: #0c2739;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #f8fafc;
+  
+  }
+  
+  .quiz-item dl {
+    padding: 20px 24px;
+    display: grid;
+    gap: 8px;
+  }
+  
+  .quiz-item h3:before {
+    counter-increment: quiz-item;
+    content: counter(quiz-item);
+  
+  background-color: #99bc29;
+  width: 28px;
+  height: 28px;
+  
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  border-radius: 50%;
+  }
+  
+  .quiz-item dl dt {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #0c2739
+  }
+  
+  input {
+    all: unset;
+    border: 1px solid #0c2739;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  input:checked {
+    border: 1px solid #0c2739;
+  }
+  
+  input:checked:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color:#99bc29;
+    border-radius: 50%;
+  }
+  
+  #acertos {
+    text-align: center;
+    background-color: #0c2739;
+    color: #FFFFFF;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  
+    width: 100%;
+    padding: 12px;
+  }
+
+  .footer {
+    background: linear-gradient(135deg, #b4d556 0%, #99bc29 50%, #7ca01b 100%);
+    color: #0C2739;
+    padding: 40px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-menu a {
+    margin: 0 0.8rem;
+    color: #0C2739;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-menu a:hover {
+    color: #FFFFFF;
+  }
+  
+  .footer-endereco p {
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .footer-contatos a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  .footer-contatos img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-contatos img:hover {
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .footer-menu a {
+        display: block;
+        margin: 10px 0;
+    }
+  
+    .footer-contatos a {
+        margin: 10px 5px;
+    }
+  }
+  

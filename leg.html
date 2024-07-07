@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vhQuiz</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/cabeçalho.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/leg.css">
+    <link rel="shortcuticon" href ="img/favicon.png" type="image">
+    <div id="header-placeholder"></div>
 </head>
 <body>
-    <main>    
 
-        <header>
-          <img src="https://www.vhsys.com.br/wp-content/webp-express/webp-images/uploads/2022/09/134-50vhsys_logo_main.png.webp" alt="Logo vhsys">
-          <h1> vhQuiz</h1>
-          <h2> Edição #1: Gestão Fiscal </h2>
-        </header>
-      
-        <div id="quiz"></div>
+    <div id="quiz"></div>
       
       <template>
           <div class ="quiz-item">
@@ -37,8 +34,19 @@
             <strong>Acertos</strong>
             <span>0 de 12</span>
           </div>
+
+          <div id="footer-placeholder"></div>
+
+          <script src="js/leg.js"></script>
+          <script src="js/carregarconteúdo.js"></script>
+          <script>
+              document.addEventListener('DOMContentLoaded', function() {
       
-      </main>
-      <script src="./index.js"></script>
+                  loadContent('header-placeholder', 'includes/cabeçalho.html');
+      
+                  loadContent('footer-placeholder', 'includes/rodape.html');
+              });
+          </script>
+
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vhQuiz</title>
+    <link rel="stylesheet" href="css/cabeçalho.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="banner">
+            <div class="cycle-slideshow"
+                data-cycle-fx="scrollHorz"
+                data-cycle-pause-on-hover="true"
+                data-cycle-speed="400"
+                data-cycle-loader="true">
+                <img src="img/banner.png" alt="Banner 1">
+                <img src="img/bannerz.png" alt="Banner 2">
+                <img src="img/bannerp.png" alt="Banner 3">
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/cycle.js"></script>
+    <script src="js/carregarconteúdo.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            loadContent('header-placeholder', 'includes/cabeçalho.html');
+
+            loadContent('footer-placeholder', 'includes/rodape.html');
+        });
+    </script>
+</body>
+</html>
