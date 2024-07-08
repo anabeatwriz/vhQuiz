@@ -42,7 +42,7 @@
     </div>
 
     <?php
-    if(isset($_POST['bsug'])){
+    if (isset($_POST['bsug'])) {
         include_once('conectar.php');
 
         $nome = $_POST['nome'];
@@ -50,14 +50,15 @@
         $sugcliente = $_POST['sugcliente'];
         $nota = $_POST['nota'];
 
-        $sql = "INSERT INTO vhquiz_prod (nome_usuario, email_usuario, sugestao_cliente, nota_cliente) VALUES ('$nome', '$email', '$sugcliente', '$nota')";
-        $usuarios = mysqli_query($conexao, $sql);
+        // Prevenção contra SQL Injection
+        $nome = mysqli_real_escape_string($conexao, $nome);
+        $email = mysqli_real_escape_string($conexao, $email);
+        $sugcliente = mysqli_real_escape_string($conexao, $sugcliente);
+        $nota = mysqli_real_escape_string($conexao, $nota);
 
-        if ($usuarios) {
-            echo "Dados inseridos com sucesso!";
-        } else {
-            echo "Erro ao inserir os dados: " . $conexao->error;
-        }
+        $sql = "INSERT INTO sped_sugestoes (nome_usuario, email_usuario, sugestao_cliente, nota_cliente) VALUES ('$nome', '$email', '$sugcliente', '$nota')";
+        $usuarios = mysqli_query($conexao, $sql);
+        
     }
     ?>
 </body>
