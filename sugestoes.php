@@ -20,7 +20,7 @@
     <div class="sugestoes">
         <div class="sug">
             <h1>Deixe sua sugestão</h1>
-            <form action="#" method="post">
+            <form action="sugestoes.php" method="post">
                 <input type="text" id="nome" placeholder="Qual é seu nome?" required>
                 <input type="email" id="email" placeholder="Digite seu e-mail" required>
                 <input type="text" id="sugcliente" placeholder="Descreva sua sugestão" required>
