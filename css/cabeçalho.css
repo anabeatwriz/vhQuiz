@@ -17,10 +17,6 @@
     -webkit-text-size-adjust: 100%;
   }
 
-  body {
-    background-color: #FFFFFF;
-  }
-
   header {
     max-width: 100%;
     height: auto;
@@ -29,7 +25,6 @@
     text-align: center;
     border-radius: 0px 0px 0px 0px;
     padding-top: 1rem;
-    box-shadow: 0px 4px 3px #99BC29;
   }
 
   nav li {
@@ -43,5 +38,4 @@
 
   nav a:hover {
     color: #99BC29;
-    border-bottom: 1px solid;
   }
