@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(230deg, #0C2739 70%, #1C3F5B 80%);
+  color: #FFF;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.main {
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #99BC29;
+  border-bottom: 1px solid #99BC29;
+}
+
+#quiz {
+  counter-reset: quiz-item;
+}
+
+.quiz-item {
+  margin: 24px auto;
+  max-width: 700px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-item h3 {
+  padding: 16px 20px;
+  color: #0C2739;
+  font-weight: bold;
+  background-color: #E0E6ED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.quiz-item h3:before {
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+  background-color: #99BC29;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #0C2739;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.quiz-item dl {
+  padding: 20px 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.quiz-item dl dt {
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0C2739;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border: 2px solid #0C2739;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+input[type="radio"]:checked {
+  border: 6px solid #99BC29;
+}
+
+#acertos {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: solid;
+  background-color: #99BC29;
+  color: #0C2739;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+}

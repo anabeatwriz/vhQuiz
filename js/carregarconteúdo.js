@@ -2,7 +2,7 @@ function loadContent(elementId, filePath) {
     fetch(filePath)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Conexão indisponível');
             }
             return response.text();
         })
@@ -10,7 +10,7 @@ function loadContent(elementId, filePath) {
             document.getElementById(elementId).innerHTML = data;
         })
         .catch(error => {
-            console.error('Error fetching the content:', error);
+            console.error('Erro ao carregar:', error);
         });
 }
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vhQuiz</title>
+    <link rel="stylesheet" href="css/cabeçalho.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/perguntas.css">
+    <link rel="shortcuticon" href ="img/favicon.png" type="image">
+    <div id="header-placeholder"></div>
+</head>
+<body>
+
+    <div id="quiz"></div>
+      
+      <template>
+          <div class ="quiz-item">
+            <h3>
+              Pergunta 01
+            </h3>
+            <dl>
+              <dt>
+                <input type="radio" name ="item" value="0">
+                <span>
+                  Resposta A
+                </span>
+              </dt>
+            </dl>
+          </div>
+      </template>
+      
+          <div id="acertos">
+            <strong>Acertos</strong>
+            <span>0 de 12</span>
+          </div>
+
+          <div id="footer-placeholder"></div>
+
+          <script src="js/exp.js"></script>
+          <script src="js/carregarconteúdo.js"></script>
+          <script>
+              document.addEventListener('DOMContentLoaded', function() {
+      
+                  loadContent('header-placeholder', 'includes/cabeçalho.html');
+      
+                  loadContent('footer-placeholder', 'includes/rodape.html');
+              });
+          </script>
+
+</body>
+</html>

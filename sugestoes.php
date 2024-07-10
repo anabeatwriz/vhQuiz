@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/home-sug.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
     <div class="conteudo">
@@ -18,7 +19,7 @@
         <div class="sugestoes">
             <div class="sug">
                 <h1>Deixe sua sugestão</h1>
-                <form action="sugestoes.php" method="post">
+                <form id="sugestaoForm" action="index.php" method="post">
                     <input type="text" id="nome" name="nome" placeholder="Qual é seu nome?" required>
                     <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
                     <input type="text" id="sugcliente" name="sugcliente" placeholder="Descreva sua sugestão" required>
@@ -41,8 +42,17 @@
         <?php include 'includes/rodape.html'; ?>
     </div>
 
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Sua sugestão foi enviada com sucesso!</p>
+        </div>
+    </div>
+
+    <script src="js/modal.js"></script>
+
     <?php
-    if (isset($_POST['bsug'])) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         include_once('conectar.php');
 
         $nome = $_POST['nome'];
@@ -58,7 +68,28 @@
 
         $sql = "INSERT INTO sped_sugestoes (nome_usuario, email_usuario, sugestao_cliente, nota_cliente) VALUES ('$nome', '$email', '$sugcliente', '$nota')";
         $usuarios = mysqli_query($conexao, $sql);
-        
+
+        if ($usuarios) {
+            echo '<script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const modal = document.getElementById("confirmationModal");
+                    modal.style.display = "block";
+
+                    const span = document.getElementsByClassName("close")[0];
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                });
+            </script>';
+        } else {
+            echo '<script>alert("Erro ao enviar sugestão");</script>';
+        }
     }
     ?>
 </body>

@@ -23,11 +23,11 @@ const perguntas = [
     pergunta: "Como o cancelamento de uma NF-e deve ser realizado corretamente?",
     respostas: [
       "Apenas entrando em contato com o cliente para informar o cancelamento",
-      "Através do sistema da SEFAZ (Secretaria da Fazenda)",
+      "Através do vhsys que está homologado com a SEFAZ",
       "Solicitando o cancelamento para a Receita Federal",
-      "Cancelando diretamente no sistema de emissão de notas fiscais da empresa",
+      "Enviando uma carta de correção",
     ],
-    correta: "Através do sistema da SEFAZ (Secretaria da Fazenda)"
+    correta: "Através do vhsys que está homologado com a SEFAZ"
   },
   {
     pergunta: "O que é o CTe (Conhecimento de Transporte Eletrônico) e em quais situações deve ser emitido?",
@@ -100,14 +100,14 @@ const perguntas = [
     correta: "Um componente do SPED Fiscal que visa controlar a produção e estoque das empresas"
   },
   {
-    pergunta: "Quais são os principais benefícios da utilização de notas fiscais eletrônicas em comparação com as notas fiscais em papel?",
+    pergunta: "Para emitir uma NF-e (55) para um consumidor do exterior, mas que recebeu a mercadoria no Brasil e precisa usar um CFOP próprio para Venda de mercadoria adquirida ou recebida de terceiros (5102) há necessidade de realizar o preenchimento de uma informação.",
     respostas: [
-      "Redução de custos e agilidade nos processos fiscais",
-      "Maior segurança, mas sem impacto nos custos",
-      "Aumento da burocracia e custos operacionais",
-      "Não há benefícios significativos em utilizar notas fiscais eletrônicas",
+      "NIF",
+      "Passaporte",
+      "RG",
+      "Início da atividade",
     ],
-    correta: "Redução de custos e agilidade nos processos fiscais"
+    correta: "Passaporte"
   }
 ];
 
